@@ -1,0 +1,9 @@
+.todoList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    gap: 1rem
+}

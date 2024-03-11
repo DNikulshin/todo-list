@@ -1,0 +1,66 @@
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+    padding: .5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.5);
+}
+
+.text {
+    font-size: 1.2rem;
+    word-break: break-word;
+    white-space: break-spaces;
+}
+
+.dateAdd {
+    color: blue;
+}
+
+.idx {
+    font-weight: bold;
+    color: seagreen;
+}
+
+/*.todo:hover {*/
+/*    background: rgb(188, 210, 198);*/
+/*}*/
+
+.label {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: red;
+}
+
+.checkbox {
+   visibility: hidden;
+}
+
+.delete {
+    padding: .2rem;
+    color: brown;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background: brown;
+    color: white;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem
+}
+
+.done {
+    background: deepskyblue;
+}
+
+.white {
+    color: white;
+}

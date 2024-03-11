@@ -1,0 +1,40 @@
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: column;
+    gap: .5rem;
+    text-align: center;
+    background: lightblue;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    transition: top 0.4s ease-out;
+}
+
+.title {
+
+}
+
+.input {
+    outline: none;
+    border: none;
+    width: calc(70% + 5vh);
+    background: honeydew;
+    padding: .8rem;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*.visible {*/
+/*    top: 0;*/
+/*    transition: top 0.4s ease-out;*/
+/*}*/
+
+/*.hidden {*/
+/*    top: -130px;*/
+/*    transition: top 0.4s ease-out;*/
+/*}*/
