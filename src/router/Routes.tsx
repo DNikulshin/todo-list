@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
-import { MainLayout } from '../layouts/MainLayout.tsx';
-import { Completed } from '../pages/Completed.tsx'
+import { MainLayout } from '../layouts/MainLayout.tsx'
+//import { SecondaryLayout } from '../layouts/SecondaryLayout.tsx'
+//import { Completed } from '../pages/Completed.tsx'
 import { Home } from '../pages/Home.tsx'
 
 export const useRoutes = () => {
@@ -12,16 +13,27 @@ export const useRoutes = () => {
                    element={<Home/>}
             >
             </Route>
-            <Route path="completed"
+            {/* <Route path='completed'
                    element={<Completed/>}
             >
-            </Route>
+            </Route> */}
 
             <Route path="*"
                    element={<Navigate to="/" replace/>}
             >
             </Route>
             </Route>
+            {/* <Route path="/ttt"  element={<SecondaryLayout/>}
+                
+            >
+                <Route path='completed'
+                   element={<Completed/>}
+            >
+            </Route>
+                   <Route path="*"
+                   element={<Navigate to="/" replace/>}
+            ></Route>
+            </Route> */}
         </Routes>
     )
 }

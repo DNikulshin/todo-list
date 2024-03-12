@@ -4,8 +4,7 @@ import { MemoTodo } from '../todo/Todo.tsx'
 import styles from '../TodoList.module.css'
 
 const completedTodoList = () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const {completedTodos} = useContext(Context)
+    const { completedTodos, toggleTodo, removeTodo } = useContext(Context)
     return (
         <div className={styles.todoList}>
             {completedTodos &&
@@ -14,7 +13,9 @@ const completedTodoList = () => {
                         idx={idx}
                         key={todo.id}
                         todo={todo}
-                        type={'completedTodos'}
+                        removeTodo={removeTodo}
+                        toggleTodo={toggleTodo}
+                        typeTodos={'completedTodos'}
                     />
                 )
             }

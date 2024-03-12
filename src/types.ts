@@ -21,10 +21,10 @@ export type TypeTodo = {
 
 export interface RemoveTodoProps {
     id: string
-   // typeTodos: 'todos' | 'completedTodos'
+    typeTodos: 'todos' | 'completedTodos'
 }
 
 export interface ToggleTodoProps {
     id: string
-   //typeTodos: 'todos' | 'completedTodos'
+   // typeTodos: 'todos' | 'completedTodos'
 }

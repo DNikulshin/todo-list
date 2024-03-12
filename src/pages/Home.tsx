@@ -1,11 +1,11 @@
-import { useContext } from 'react'
 import { MemoTodoList } from '../components/todo-list/TodoList.tsx'
-import { Context } from '../context/Context.tsx'
+import { MemoCompletedTodoList } from '../components/todo-list/completedTodoList.tsx/CompletedTodoList.tsx'
 export const Home = () => {
-    const {todos} = useContext(Context)
+ 
     return (
-        <MemoTodoList
-            todos={todos}
-        />
+        <>
+        <MemoTodoList/>
+        <MemoCompletedTodoList/>
+        </>
     )
 }

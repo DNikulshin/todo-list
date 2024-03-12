@@ -21,7 +21,8 @@
 .input {
     outline: none;
     border: none;
-    width: calc(70% + 5vh);
+    width: 100%;
+    max-width: 1200px;
     background: honeydew;
     padding: .8rem;
     font-weight: bold;

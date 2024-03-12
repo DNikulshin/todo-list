@@ -56,8 +56,8 @@ export const Navigation = () => {
             <h1 className={styles.title}>
                 Todo list
             </h1>
-            <Link to='/'>Home</Link>
-            <Link to='completed'>Completed</Link>
+            {/* <Link to='/'>Home</Link>
+            <Link to='completed'>Completed</Link> */}
                 <input
                 type="text"
                 value={value}

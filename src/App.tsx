@@ -8,13 +8,20 @@ import { useRoutes } from './router/Routes.tsx'
 
 function App() {
     const {setLocalStorage} = useLocalStorage()
-    const {toggleTodo, removeTodo, onChangeHandler, todos, completedTodos} = useData()
+    const {toggleTodo,
+         removeTodo, 
+         onChangeHandler, 
+         todos, 
+         completedTodos,
+        //  toggleTodoCompleted,
+        //  removeTodoCompleted
+        } = useData()
     const routes = useRoutes()
-    console.log(completedTodos, 'completedTodos')
+    console.log(todos, 'todos')
     useEffect(() => {
         setLocalStorage({typeTodos: 'todos', todos})
-        setLocalStorage({typeTodos: 'completedTodos', todos: completedTodos})
-    }, [completedTodos, setLocalStorage, todos])
+       setLocalStorage({typeTodos: 'completedTodos', todos: completedTodos})
+    }, [setLocalStorage, todos])
 
     return (
         <Context.Provider value={{
@@ -22,7 +29,9 @@ function App() {
             toggleTodo,
             onChangeHandler,
             todos,
-            completedTodos
+            completedTodos,
+        //     toggleTodoCompleted,
+        //    removeTodoCompleted
         }}>
             <Router>
                 <div className={mainStyles.app}>

@@ -1,16 +1,19 @@
-import { memo, useContext } from 'react'
+import { memo } from 'react'
 import { ITodo} from '../../../types.ts'
 import styles from './Todo.module.css'
-import  {Context} from '../../../context/Context.tsx'
+import {ToggleTodoProps, RemoveTodoProps} from '../../../types.ts'
 
 interface TodoProps {
     todo: ITodo
     idx: number
-    type: string
+    toggleTodo: ({id}: ToggleTodoProps) =>  void
+    removeTodo: ({id}: RemoveTodoProps) =>  void
+    typeTodos: 'todos' | 'completedTodos'
 }
 
-const Todo = ({todo, idx, type}: TodoProps) => {
-    const {toggleTodo, removeTodo} = useContext(Context)
+const Todo = ({todo, idx, toggleTodo, removeTodo, typeTodos}: TodoProps) => {
+   console.log(todo.id, typeTodos);
+   
     return (
         <div key={todo.id} className={ todo.completed ? `${styles.todo} ${styles.done}` : styles.todo}>
             <span className={styles.idx}>#{idx + 1}</span>
@@ -37,13 +40,14 @@ const Todo = ({todo, idx, type}: TodoProps) => {
                     <input
                         type="checkbox"
                         className={styles.checkbox}
-                        onChange={() => toggleTodo({id: todo.id, type})}
+                        onChange={() => toggleTodo({id: todo.id})}
                     />
                 </label>
                 <span
-                    onClick={() => removeTodo({id: todo.id, type})}
+                    onClick={() => removeTodo({id: todo.id, typeTodos})}
                     className={styles.delete}
-                >x
+                >
+                    x
                 </span>
             </div>
 
